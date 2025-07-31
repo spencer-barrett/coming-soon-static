@@ -71,6 +71,12 @@ flex-direction: column;
     }
 }
 
+@media screen and (height <= 700) {
+    .contentWrapper{
+        max-height: 400px;
+    }
+}
+
 .textStyle {
     font-family: "Poppins", sans-serif;
     color: white;
