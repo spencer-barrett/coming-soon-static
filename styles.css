@@ -25,6 +25,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
+
 }
 
 .formContainer {
@@ -34,6 +35,19 @@ flex-direction: column;
     justify-content: center;
 }
 
+.glow {
+position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  transform: translate(-50%, -50%);
+  background: #00ff95;
+  filter: blur(180px);
+  opacity: 0.18;
+  z-index: -1;
+}
+
 .contentWrapper { 
     display: flex;
     flex-direction: column;
@@ -41,15 +55,20 @@ flex-direction: column;
     justify-content: center;
     max-width: 500px;
     width: 100%;
-    border: 1px solid rgb(53, 53, 53);
+    border: 1px solid rgba(0, 255, 149, 0.1);
+    margin-bottom: 2rem;
     border-radius: 16px;
     padding: 2rem;
-    background: rgba(0, 0, 0, 0.08);
-    box-shadow: 10px 10px 10px rgb(26, 26, 26);
+    background: rgba(0, 0, 0, 0.85);
+    /* background: #000000;
+background: linear-gradient(351deg, rgba(0, 0, 0, 1) 69%, rgba(61, 61, 61, 1) 100%); */
+    /* box-shadow: 10px 10px 10px rgb(26, 26, 26); */
     height: 50%;
     /* max-height: 600px; */
     
 }
+
+
 
 @media screen and (max-width: 500px){
     .contentWrapper{
@@ -62,6 +81,12 @@ flex-direction: column;
       height: auto !important;
     }
 
+
+    .glow{
+        width: 300px;
+        height: 400px;
+    }
+
     h1{
         font-size: 1.5rem;
     }
@@ -70,6 +95,28 @@ flex-direction: column;
         font-size: 0.75rem;
     }
 }
+
+
+@media screen and (max-width: 700px) {
+    .contentWrapper {
+      max-height: 300px !important;
+      max-width: 350px ;
+    }
+
+    .logo{
+        max-width: 50%;
+        height: auto;
+      }
+
+      .glow{
+        width: 300px;
+        height: 400px;
+    }
+
+      .logoContainer{
+        margin-bottom: 1rem !important;
+      }
+  }
 
 @media screen and (max-height: 700px) {
     .contentWrapper {
@@ -81,6 +128,11 @@ flex-direction: column;
         height: auto;
       }
 
+      .glow{
+        width: 300px;
+        height: 400px;
+    }
+
       .logoContainer{
         margin-bottom: 1rem !important;
       }
@@ -89,6 +141,13 @@ flex-direction: column;
 .textStyle {
     font-family: "Poppins", sans-serif;
     color: white;
+}
+
+
+.copywrite {
+    font-size: x-small;
+    font-weight: 300; 
+    color: #b9b9b9ff;
 }
 
 .inputContainer {
@@ -128,7 +187,7 @@ input {
     height: 2rem;
     font-family: "Poppins", sans-serif;
     color: white;
-    background-color :rgb(31, 31, 31); 
+    background-color :rgba(31, 31, 31, 0); 
     border: 1px solid rgb(53, 53, 53);
     border-radius: 6px;
     padding-left: 2.5rem;
